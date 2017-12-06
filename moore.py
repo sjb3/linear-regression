@@ -7,8 +7,10 @@ import matplotlib.pyplot as plt
 X = []
 Y = []
 
-# use regex to elimiate non decimal char
-non_deciomal = re.compile(r'[^\d+')
+# use regex to elimiate non decimal characters
+non_deciomal = re.compile(r'[^\d]+')
 
-for line in open('moore.csv')
+for line in open('moore.csv'):
+  r = line.split('\t')
+  x = int(non_deciomal.sub())
 
