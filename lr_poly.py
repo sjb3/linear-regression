@@ -16,5 +16,14 @@ X = np.array(X)
 Y = np.array(Y)
 
 # plot them
-plt .scatter(X[:,1], Y)
+plt.scatter(X[:,1], Y)
+plt.show()
+
+# calculate weights
+w = np.linalg.solve(np.dot(X.T, X), np.dot(X.T, Y))
+Yhat = np.dot(X, w)
+
+# plot it all together
+plt.scatter(X[:,1], Y)
+plt.plot(X[:,1], Yhat)
 plt.show()
